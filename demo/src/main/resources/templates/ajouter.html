@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns :th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ajout des articles</title>
+<link th:rel="stylesheet" th:href="@{/bootstrap.min.css}">
+
+</head>
+<body>
+<form action="#" th:action="@{/postAjouterArticle}" th:object="article" method="get">
+<pre>
+
+			Nom    			:     <input type="text" th:field="@*{nom}">
+			
+			
+			
+			Description     :     <input type="text" th:field="@*{description}">
+			
+			
+			
+			Prix    		:     <input type="text" th:field="@*{prix}">
+
+
+</pre>
+</form>
+<script type="text/javascript" th:src="@{/bootstrap.min.css}"></script>
+<script type="text/javascript" th:src="@{/jquery-3.6.1.js}"></script>
+</body>
+</html>

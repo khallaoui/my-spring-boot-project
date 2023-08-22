@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns :th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>List des articles</title>
+<link th:rel="stylesheet" th:href="@{/bootstrap.min.css}">
+
+</head>
+<body>
+
+<div class="container">
+
+</div>
+<h2>Liste Des Articles</h2>
+<a th:href="@{/addArt}">Ajouter un article</a>
+<table class="table">
+<thead class="thead-dark">
+	<tr>
+		<th scope="col">#</th>   <th scope="col">Nom</th>     <th scope="col">Description</th>    <th scope="col">Prix</th>     <th scope="col">Actions</th>
+	</tr>
+</thead>
+<tbody>
+	<tr th:each="art, cmpt : ${articles}">
+	<td th:text="${cmpt.count}"></td>    <td  th:text="${art.nom}"></td>      <td th:text="${art.description}"></td>     <td  th:text="${art.prix}"></td>    <td>Modifier</td>
+	</tr>
+</tbody>
+</table>
+<script type="text/javascript" th:src="@{/bootstrap.min.css}"></script>
+<script type="text/javascript" th:src="@{/jquery-3.6.1.js}"></script>
+</body>
+</html>
